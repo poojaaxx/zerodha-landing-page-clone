@@ -1,0 +1,15 @@
+{
+  "name": "zerodha-landing-page-clone",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "eslint .",
+    "test": "playwright test"
+  },
+  "dependencies": { "react": "^19.2.0", "react-dom": "^19.2.0" },
+  "devDependencies": { "vite": "^7.3.0", "@vitejs/plugin-react": "^5.1.0", "eslint": "^9.39.0", "@eslint/js": "^9.39.0", "eslint-plugin-react-hooks": "^7.0.0", "globals": "^16.5.0", "@playwright/test": "^1.56.0", "@fontsource/inter": "^5.2.0" }
+}
