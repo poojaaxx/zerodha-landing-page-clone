@@ -1,0 +1,7 @@
+.tools/
+test-results/
+node_modules/
+dist/
+.git/
+.env
+.env.*

@@ -1,12 +1,12 @@
 import { footerColumns, legalLinks, legalHtml } from '../data/footer';
 const socials = [
   ['X', 'https://x.com/zerodha', 'x-twitter.svg'],
-  ['Facebook', 'https://facebook.com/zerodha.social', null, 'f'],
-  ['Instagram', 'https://instagram.com/zerodhaonline/', null, '◎'],
-  ['LinkedIn', 'https://linkedin.com/company/zerodha', null, 'in'],
+  ['Facebook', 'https://facebook.com/zerodha.social', null, '\uf230'],
+  ['Instagram', 'https://instagram.com/zerodhaonline/', null, '\uf16d'],
+  ['LinkedIn', 'https://linkedin.com/company/zerodha', null, '\uf0e1'],
   ['YouTube', 'https://www.youtube.com/@zerodhaonline', 'youtube.svg'],
   ['WhatsApp', 'https://whatsapp.com/channel/0029Va8tzF0EquiIIb9j791g', 'whatsapp-logo.svg'],
-  ['Telegram', 'https://t.me/zerodhain', null, '➤'],
+  ['Telegram', 'https://t.me/zerodhain', null, '\uf2c6'],
 ];
 export default function Footer() {
   return <footer className="site-footer"><div className="container">

@@ -71,6 +71,8 @@ p { margin-bottom: 16px; }
 .social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; max-width: 175px; }
 .social-links a { color: #666; display: flex; width: 25px; height: 28px; align-items: center; justify-content: center; font-weight: 500; font-size: 20px; }
 .social-links .social-divider { position: relative; margin-top: 14px; }
+@font-face { font-family: 'Reference icons'; src: url('/assets/fontello.woff') format('woff'); font-display: block; }
+.social-links span { font-family: 'Reference icons'; font-weight: normal; }
 .social-divider::before { content: ''; position: absolute; top: -10px; left: 0; width: 160px; border-top: 1px solid #ddd; }
 .social-divider ~ a { margin-top: 14px; }
 .app-badges { display: flex; gap: 8px; margin-top: 25px; }
