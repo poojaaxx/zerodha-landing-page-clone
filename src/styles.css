@@ -60,11 +60,33 @@ p { margin-bottom: 16px; }
 .space-top { margin-top: 28px; }
 .account-section { text-align: center; padding-bottom: 80px; }
 .account-section p { color: #666; margin-bottom: 30px; }
+.site-footer { background: #fafafb; border-top: 1px solid #eee; padding: 38px 0 25px; }
+.footer-grid { display: grid; grid-template-columns: 1.2fr repeat(4, 1fr); gap: 28px; }
+.footer-brand > p { font-size: 12px; color: #666; margin-top: 20px; line-height: 1.9; }
+.footer-grid h3 { font-size: 18px; margin-bottom: 14px; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 8px; font-size: 14px; line-height: 1.8; }
+.footer-grid nav a { color: #666; }
+.footer-grid nav a:hover { color: #387ed1; }
+.social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; max-width: 175px; }
+.social-links a { color: #666; display: flex; width: 25px; height: 28px; align-items: center; justify-content: center; font-weight: 500; font-size: 20px; }
+.social-links .social-divider { position: relative; margin-top: 14px; }
+.social-divider::before { content: ''; position: absolute; top: -10px; left: 0; width: 160px; border-top: 1px solid #ddd; }
+.social-divider ~ a { margin-top: 14px; }
+.app-badges { display: flex; gap: 8px; margin-top: 25px; }
+.app-badges img { width: 90px; }
+.clone-notice { color: #595959; font-size: 12px; margin-top: 35px; }
+.legal-copy { font-size: 10px; line-height: 1.8; color: #666; margin-top: 25px; overflow-wrap: anywhere; }
+.legal-copy p { margin-bottom: 12px; }
+.legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; margin-top: 25px; font-size: 12px; }
+.legal-links a { color: #666; }
 @media (max-width: 1000px) {
   .trust-grid { gap: 35px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .prices-grid { max-width: 650px; margin-block: 12px; }
   .education-grid { gap: 40px; }
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 800px) {
   .desktop-nav { display: none; }
@@ -81,6 +103,7 @@ p { margin-bottom: 16px; }
   .education-grid img { margin-inline: auto; }
   .api-banner { flex-wrap: wrap; margin-bottom: 60px; padding: 24px; gap: 15px; }
   .api-art { display: none; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
   .container { width: calc(100% - 40px); }
