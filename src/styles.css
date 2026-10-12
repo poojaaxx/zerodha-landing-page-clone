@@ -37,6 +37,35 @@ h1, h2, h3 { font-weight: 500; line-height: 1.4; }
 .hero p { font-size: 20px; margin-bottom: 32px; }
 .button { display: inline-block; color: white; background: #387ed1; border-radius: 3px; padding: 8px 30px; font-size: 20px; font-weight: 500; line-height: 1.7; }
 .button:hover { color: white; background: #222; }
+.section { padding-bottom: 100px; }
+h2 { font-size: 32px; margin-bottom: 22px; }
+h3 { font-size: 20px; margin-bottom: 8px; }
+p { margin-bottom: 16px; }
+.trust-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 65px; align-items: center; }
+.features-grid { display: grid; gap: 18px; }
+.feature-card p { color: #666; margin-bottom: 0; }
+.ecosystem img { width: 100%; }
+.product-links { display: flex; justify-content: center; gap: 28px; margin-top: 10px; }
+.api-banner { border: 1px solid #eee; border-radius: 6px; display: flex; gap: 25px; align-items: center; padding: 25px 30px; margin-bottom: 90px; }
+.api-banner > img:first-child { width: 110px; }
+.api-banner p { font-size: 14px; color: #666; margin: 0; }
+.api-art { width: 140px; }
+.pricing-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 35px; align-items: center; }
+.prices-grid { display: grid; grid-template-columns: 1fr 1.3fr 1fr; }
+.price-card { display: flex; align-items: center; }
+.price-card img { width: 105px; flex-shrink: 0; }
+.price-card p { font-size: 10px; line-height: 1.6; margin: 20px 0 0 -10px; }
+.education-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 100px; align-items: center; }
+.education-grid img { width: 430px; }
+.space-top { margin-top: 28px; }
+.account-section { text-align: center; padding-bottom: 80px; }
+.account-section p { color: #666; margin-bottom: 30px; }
+@media (max-width: 1000px) {
+  .trust-grid { gap: 35px; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .prices-grid { max-width: 650px; margin-block: 12px; }
+  .education-grid { gap: 40px; }
+}
 @media (max-width: 800px) {
   .desktop-nav { display: none; }
   .menu-toggle { margin-left: auto; }
@@ -45,6 +74,13 @@ h1, h2, h3 { font-weight: 500; line-height: 1.4; }
   .hero h1 { font-size: 34px; }
   .hero p { font-size: 18px; }
   .hero-image { margin-bottom: 35px; }
+  .section { padding-bottom: 65px; }
+  h2 { font-size: 28px; }
+  .trust-grid, .education-grid { grid-template-columns: 1fr; gap: 35px; }
+  .ecosystem { max-width: 600px; margin-inline: auto; }
+  .education-grid img { margin-inline: auto; }
+  .api-banner { flex-wrap: wrap; margin-bottom: 60px; padding: 24px; gap: 15px; }
+  .api-art { display: none; }
 }
 @media (max-width: 480px) {
   .container { width: calc(100% - 40px); }
@@ -52,4 +88,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.4; }
   .menu-products { grid-template-columns: repeat(2, 1fr); }
   .menu-bottom { grid-template-columns: repeat(2, 1fr); }
   .menu-bottom > :last-child { grid-column: 1 / -1; }
+  .prices-grid { grid-template-columns: 1fr; gap: 14px; }
+  .price-card p { font-size: 13px; margin-left: 0; }
+  .product-links { flex-wrap: wrap; gap: 12px 24px; }
 }
