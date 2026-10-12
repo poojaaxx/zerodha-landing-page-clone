@@ -25,6 +25,10 @@ for (const width of [375, 1440]) {
     if (width < 800) await expect(page.getByRole('navigation', { name: 'Mobile navigation' })).toBeVisible();
     await page.keyboard.press('Escape');
     await page.evaluate(() => window.scrollTo(0, 0));
+    for (const image of await page.locator('header img:visible, .hero-image').all()) {
+      await expect.poll(() => image.evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true);
+      await image.evaluate(el => el.decode());
+    }
     await page.screenshot({ path: `test-results/deployment-top-${width}.png` });
     const notice = page.locator('.clone-notice');
     await notice.scrollIntoViewIfNeeded();

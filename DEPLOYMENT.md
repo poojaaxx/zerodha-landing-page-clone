@@ -8,7 +8,7 @@ Deployed on 12 October 2026 through the authenticated `poojaaxx` Vercel account.
 - Vercel project: `poojaas-projects-d9d18c0c/zerodha-landing-page-clone`
 - Build: React + Vite, `npm run build`, output `dist`
 
-The production deployment must reach Vercel's READY state. The same eleven Chromium checks used locally run against the production URL, covering mobile, tablet and desktop widths, page refresh, fonts, keyboard focus and the unofficial-clone disclaimer.
+The production deployment was verified in Vercel's READY state on the existing free Hobby plan. All eleven Chromium checks pass against the production URL, covering mobile, tablet and desktop widths, page refresh, fonts, keyboard focus and the unofficial-clone disclaimer. No paid service or billing change was enabled.
 
 To repeat hosted checks in PowerShell:
 
