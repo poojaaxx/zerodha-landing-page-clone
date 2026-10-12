@@ -59,13 +59,17 @@ The guide supplies no pixel mockup, explicit URL, or numerical scoring rubric; i
 
 ## Verification
 
-ESLint and production build pass. Nine Chromium tests cover content headings, data-driven item counts, visible image loading, horizontal overflow, runtime errors, sticky header, keyboard menu behavior, focus return, official CTA/policy URLs, footer copy and outside-click dismissal. Full-page screenshots are visually inspected at desktop, tablet and mobile widths. Other browser engines and physical devices have not been tested. External destinations are matched to the reference; their future availability is outside this project.
+ESLint and production build pass. Eleven Chromium tests cover content headings, data-driven item counts, visible image loading, horizontal overflow, runtime errors, sticky header, keyboard menu behavior, focus return, official CTA/policy URLs, footer copy, outside-click dismissal, page refresh, locally loaded Inter fonts, visible focus outlines, the readable unofficial-clone disclaimer, and absence of data-collection forms. Full-page screenshots are visually inspected at desktop, tablet and mobile widths. Other browser engines and physical devices have not been tested. External destinations are matched to the reference; their future availability is outside this project.
 
 ## Deployment
 
 Live production site: https://zerodha-landing-page-clone-orpin.vercel.app
 
-Vercel: run `npx vercel login`, then `npx vercel --prod` from this directory, select your account, and use the Vite preset. `vercel.json` sets the build to `npm run build` and output to `dist`. A local CLI deployment does not require a GitHub push. The project was deployed using the confirmed Vercel account and the same browser checks were applied to the production URL. Alternatively import the GitHub repository after explicitly choosing to push it.
+Vercel: run `npx vercel login`, then `npx vercel deploy --prod` from this directory. The existing project uses the Vite preset. `vercel.json` sets the build to `npm run build` and output to `dist`. This is a single-page landing site served at `/`; refreshing the root requires no extra route rewrites. No paid service or upgrade is required.
+
+Deployment changes are committed and pushed to `https://github.com/poojaaxx/zerodha-landing-page-clone` using the verified Git identity. The final production deployment is made from a clean latest commit; the Vercel deployment metadata is checked against that full Git SHA. The same eleven Chromium checks run against the public URL. For future updates: run checks, commit, `git push origin main`, then `npx vercel deploy --prod` (or wait for the linked repository's automatic deployment).
+
+Hosted checks in PowerShell: set `$env:DEPLOYMENT_URL='https://zerodha-landing-page-clone-orpin.vercel.app'`, run `npm test`, then `Remove-Item Env:DEPLOYMENT_URL`.
 
 Netlify: use the supplied `netlify.toml`, with build command `npm run build` and publish directory `dist`, or upload the built `dist` directory through Netlify's dashboard. Deployment requires an authenticated hosting account. See `DEPLOYMENT.md` for the outcome of this session.
 

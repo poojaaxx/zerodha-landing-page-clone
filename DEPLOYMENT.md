@@ -8,7 +8,7 @@ Deployed on 12 October 2026 through the authenticated `poojaaxx` Vercel account.
 - Vercel project: `poojaas-projects-d9d18c0c/zerodha-landing-page-clone`
 - Build: React + Vite, `npm run build`, output `dist`
 
-The production deployment reached Vercel's READY state. The same nine Chromium checks used locally are run against the production URL, covering mobile, tablet and desktop widths.
+The production deployment must reach Vercel's READY state. The same eleven Chromium checks used locally run against the production URL, covering mobile, tablet and desktop widths, page refresh, fonts, keyboard focus and the unofficial-clone disclaimer.
 
 To repeat hosted checks in PowerShell:
 
@@ -18,4 +18,6 @@ npm test
 Remove-Item Env:DEPLOYMENT_URL
 ```
 
-To redeploy local changes: `npx vercel deploy --prod`. Vercel linked the supplied GitHub repository during project creation; no commits were pushed. The local-only `.vercel` settings are ignored. Build output, dependencies, tools, temporary screenshots and environment files are excluded from deployment uploads.
+To redeploy local changes: `npx vercel deploy --prod`. Vercel is linked to `https://github.com/poojaaxx/zerodha-landing-page-clone`. Deployment updates are committed and pushed to `main` without rewriting history. The local-only `.vercel` settings are ignored. Build output, dependencies, tools, temporary screenshots and environment files are excluded from deployment uploads.
+
+The final deployment is built from the latest clean Git commit. Verify the deployed SHA with `npx vercel api /v13/deployments/<deployment-id>` and compare the Git SHA in its metadata with `git rev-parse HEAD` and `git ls-remote origin refs/heads/main`. This avoids embedding a commit hash in a file that would itself create a newer commit.
