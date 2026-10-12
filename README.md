@@ -2,6 +2,45 @@
 
 Educational React project based on the SapphireIQ four-module curriculum. Unaffiliated with Zerodha; no trading or account functionality is implemented.
 
+**[View the live deployment →](https://zerodha-landing-page-clone-orpin.vercel.app)**
+
+## Project screenshots
+
+Screenshots captured from the public deployment on 12 October 2026. Click an image to view it at full size.
+
+### Desktop
+
+[![Desktop landing page with navigation, investing platforms illustration and signup button](docs/media/desktop.png)](docs/media/desktop.png)
+
+### Tablet and mobile
+
+<a href="docs/media/tablet.png"><img src="docs/media/tablet.png" alt="Tablet layout with the investing hero and responsive navigation" width="480"></a>
+<a href="docs/media/mobile.png"><img src="docs/media/mobile.png" alt="Mobile layout with stacked content and compact navigation" width="260"></a>
+
+[View the complete landing-page screenshot, including all sections and footer](docs/media/full-page.png).
+
+## Animated project previews
+
+These looping GIFs demonstrate real interactions recorded on the deployed site; they do not add animations to the website. GIF playback may be reduced by your browser or accessibility settings.
+
+### Desktop navigation
+
+Opening the product menu and dismissing it with Escape.
+
+![Animated desktop product menu opening and closing](docs/media/desktop-menu.gif)
+
+### Mobile navigation
+
+The compact menu reveals navigation, products, utilities and education links.
+
+<img src="docs/media/mobile-menu.gif" alt="Animated mobile navigation menu opening and closing" width="300">
+
+### Landing-page tour
+
+Scroll through the hero, trust features, ecosystem, pricing, education and account CTA while the header stays visible.
+
+![Animated scroll tour of the landing page with sticky navigation](docs/media/tour.gif)
+
 ## Development
 
 Node.js 22.12+ (or 20.19+) is required. Run `npm ci`, then `npm run dev`. Run `npm run check` and `npm run build` to verify the project; `npm run preview` serves the production build.
@@ -32,12 +71,13 @@ npx playwright install chromium
 npm test
 ```
 
-Browser tests use the production build, so run `npm run build` before `npm test`. The test runner starts its own preview server on port 4173; stop a separately running preview first. Generated screenshots and reports are ignored by Git.
+Browser tests use the production build, so run `npm run build` before `npm test`. The test runner starts its own preview server on port 4173; stop a separately running preview first. Generated test screenshots and reports are ignored by Git. Selected README screenshots and animated previews are intentionally tracked in `docs/media/`.
 
 ## Structure
 
 ```text
 public/assets/        Local reference illustrations, logos, badges, icons
+docs/media/           README screenshots and animated interaction previews
 src/components/       Navbar, Hero, reusable links/cards/sections, Footer
 src/data/             Navigation, feature/pricing arrays, fixed footer copy
 src/styles.css        Reset, layout, focus styles and responsive rules
