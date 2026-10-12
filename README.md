@@ -63,7 +63,9 @@ ESLint and production build pass. Nine Chromium tests cover content headings, da
 
 ## Deployment
 
-Vercel: run `npx vercel login`, then `npx vercel --prod` from this directory, select your account, and use the Vite preset. `vercel.json` sets the build to `npm run build` and output to `dist`. A local CLI deployment does not require a GitHub push. Alternatively import the GitHub repository after explicitly choosing to push it.
+Live production site: https://zerodha-landing-page-clone-orpin.vercel.app
+
+Vercel: run `npx vercel login`, then `npx vercel --prod` from this directory, select your account, and use the Vite preset. `vercel.json` sets the build to `npm run build` and output to `dist`. A local CLI deployment does not require a GitHub push. The project was deployed using the confirmed Vercel account and the same browser checks were applied to the production URL. Alternatively import the GitHub repository after explicitly choosing to push it.
 
 Netlify: use the supplied `netlify.toml`, with build command `npm run build` and publish directory `dist`, or upload the built `dist` directory through Netlify's dashboard. Deployment requires an authenticated hosting account. See `DEPLOYMENT.md` for the outcome of this session.
 
